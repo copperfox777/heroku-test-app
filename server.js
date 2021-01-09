@@ -73,7 +73,8 @@ app.use(async (ctx) => {
       }
       ctx.response.status = 201;
     default:
-      ctx.response.status = 404;
+      ctx.response.status = 200;
+      ctx.response.body = "please call app like ?method=allTickets";
       return;
   }
 });
